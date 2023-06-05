@@ -1,48 +1,79 @@
 import Svg, {Path} from "react-native-svg";
+import {memo} from "react";
 
+/**
+ * react-native-svg wrapper with custom params
+ * @param path The svg string representation of a path (eg. "M0 0 L100 100")
+ * @param boxWidth The width of the viewBox (ie the max - min x value of the svg "path" string)
+ * @param boxHeight The height of the viewBox (ie the max - min y value of the svg "path" string)
+ */
 export const Icon = ({
-	name,
+	path,
 	size = 20,
-	// colour,
-	// stroke,
-	strokeWidth,
+	scale,
 	style,
+	colour = "#000000",
 	svgProps,
+	boxWidth,
+	boxHeight,
 	pathProps,
+	translateX,
+	translateY,
+	borderWidth,
+	borderColour,
 }: {
-	name: string,
-	size: number,
-	// colour?,
-	// stroke?,
-	strokeWidth?: number,
-	style?: object,
-	svgProps?: object,
-	pathProps?: object
+	/**
+	 * The svg string representation of a path (eg. "M0 0 L100 100")
+	 */
+	path: string;
+	size: number;
+	style?: any;
+	scale?: number;
+	colour: string;
+	/**
+	 * Any additional props to pass to the internal Svg component (react-native-svg)
+	 */
+	svgProps?: any;
+	/**
+	 * The width of the viewBox (ie the max - min x value of the svg "path" string)
+	 */
+	boxWidth: number;
+	/**
+	 * The height of the viewBox (ie the max - min y value of the svg "path" string)
+	 */
+	boxHeight: number;
+	pathProps?: any;
+	translateX?: number;
+	translateY?: number;
+	borderWidth?: number;
+	borderColour?: string;
 }) => {
-	// const fill = useStore(state => colour || state.colours.foreground);
-	// const props = Icons[name];
-	// const width = props.height > props.width ? (size * props.width) / props.height : size;
-	// const height = props.height > props.width ? size : (size * props.height) / props.width;
-
-	// return (
-	// 	<Svg
-	// 		width={width}
-	// 		height={height}
-	// 		viewBox={`0 0 ${props.width} ${props.height}`}
-	// 		style={[{...(props?.scale || props?.translateX || props?.translateY ? {transform: [
-	// 			...(props?.scale ? [{scale: props.scale}] : []),
-	// 			...(props?.translateX ? [{translateX: props.translateX * width}] : []),
-	// 			...(props?.translateY ? [{translateY: props.translateY * height}] : [])
-	// 		]} : null)}, style]}
-	// 		{...svgProps}>
-	// 		<Path
-	// 			fill={fill}
-	// 			d={props.path}
-	// 			stroke={stroke}
-	// 			fillRule="nonzero"
-	// 			strokeWidth={strokeWidth}
-	// 			{...pathProps}
-	// 		/>
-	// 	</Svg>
-	// );
+	const max = Math.max(boxWidth, boxHeight);
+	const width = (boxWidth / max) * size;
+	const height = (boxHeight / max) * size;
+	return (
+		<Svg
+			width={width}
+			height={height}
+			viewBox={`0 0 ${boxWidth} ${boxHeight}`}
+			style={[{...(scale || translateX || translateY ? {transform: [
+				...(scale ? [{scale}] : []),
+				...(translateX ? [{translateX: translateX * width}] : []),
+				...(translateY ? [{translateY: translateY * height}] : [])
+			]} : null)}, style]}
+			{...svgProps}>
+			<Path
+				d={path}
+				fill={colour}
+				fillRule="nonzero"
+				stroke={borderColour}
+				strokeWidth={borderWidth}
+				{...pathProps}
+			/>
+		</Svg>
+	);
 };
+
+
+
+export const MemoisedIcon = memo(Icon);

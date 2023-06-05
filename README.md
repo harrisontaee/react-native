@@ -17,14 +17,11 @@ import {Icon, Button} from "@harrisontaee/react-native";
 import {usePrevious} from "@harrisontaee/react-native";
 ```
 
-## Components
+## Library
 
 - [Icon](src/icon)
 - [Buttons](src/buttons)
 	- Button
 	- Circle Button
-
-
-## Utilities
 - [Hooks](src/hooks)
 	- usePrevious

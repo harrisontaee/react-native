@@ -729,6 +729,11 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@harrisontaee/library@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@harrisontaee/library/-/library-1.0.6.tgz#a3151f5032290b6912bb9447f51c32a756906bdf"
+  integrity sha512-NuyEJ/FBRuT/tU6Zwa5C1bYA+SBFiHhbSh+Y4KW4NBgtLeFFVWZt55MX9yJvgLO710hNSxx2gtP9GQjc8bC6Yg==
+
 "@jest/create-cache-key-function@^29.2.1":
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/@jest/create-cache-key-function/-/create-cache-key-function-29.5.0.tgz#24e019d03e634be4affe8bcee787d75a36ae57a2"
