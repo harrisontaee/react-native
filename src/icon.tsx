@@ -1,27 +1,7 @@
 import Svg, {Path} from "react-native-svg";
 import {memo} from "react";
 
-/**
- * react-native-svg wrapper with custom params
- * @param path The svg string representation of a path (eg. "M0 0 L100 100")
- * @param boxWidth The width of the viewBox (ie the max - min x value of the svg "path" string)
- * @param boxHeight The height of the viewBox (ie the max - min y value of the svg "path" string)
- */
-export const Icon = ({
-	path,
-	size = 20,
-	scale,
-	style,
-	colour = "#000000",
-	svgProps,
-	boxWidth,
-	boxHeight,
-	pathProps,
-	translateX,
-	translateY,
-	borderWidth,
-	borderColour,
-}: {
+export type IconProps = {
 	/**
 	 * The svg string representation of a path (eg. "M0 0 L100 100")
 	 */
@@ -47,7 +27,33 @@ export const Icon = ({
 	translateY?: number;
 	borderWidth?: number;
 	borderColour?: string;
-}) => {
+};
+
+
+
+
+
+/**
+ * react-native-svg wrapper with custom params
+ * @param path The svg string representation of a path (eg. "M0 0 L100 100")
+ * @param boxWidth The width of the viewBox (ie the max - min x value of the svg "path" string)
+ * @param boxHeight The height of the viewBox (ie the max - min y value of the svg "path" string)
+ */
+export const Icon = ({
+	path,
+	size = 20,
+	scale,
+	style,
+	colour = "#000000",
+	svgProps,
+	boxWidth,
+	boxHeight,
+	pathProps,
+	translateX,
+	translateY,
+	borderWidth,
+	borderColour,
+}: IconProps) => {
 	const max = Math.max(boxWidth, boxHeight);
 	const width = (boxWidth / max) * size;
 	const height = (boxHeight / max) * size;

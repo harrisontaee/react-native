@@ -1,6 +1,6 @@
 {
 	"name": "@harrisontaee/react-native",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An organised and practical collection of reusable React Native components and utilities",
 	"main": "src/index.ts",
 	"author": "Harrison Taee <harrisontaee@protonmail.com> (https://github.com/harrisontaee)",
@@ -14,19 +14,19 @@
 		"url": "https://github.com/harrisontaee/react-native/issues"
 	},
 	"peerDependencies": {
+		"@harrisontaee/library": "^1.0.6",
 		"react": ">=18.0",
-		"react-native": ">=0.64"
+		"react-native": ">=0.64",
+		"react-native-svg": ">=13.4.0"
 	},
 	"devDependencies": {
+		"@harrisontaee/library": "^1.0.6",
 		"@babel/plugin-proposal-export-namespace-from": "^7.18.9",
 		"@types/react": "^18.2.8",
 		"@types/react-native": "^0.72.2",
 		"react": ">=18.0",
 		"react-native": ">=0.64",
+		"react-native-svg": "^13.4.0",
 		"typescript": "4.8.3"
-	},
-	"dependencies": {
-		"@harrisontaee/library": "^1.0.6",
-		"react-native-svg": ">=13.4.0"
 	}
 }

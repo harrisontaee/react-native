@@ -13,7 +13,7 @@ type Props = PressableProps & {
 export const Button = ({
 	height = 40,
 	padding = 10,
-	colour = "#000000",
+	colour = "#00000000",
 	style = {},
 	children,
 	...rest
@@ -40,7 +40,7 @@ export const Button = ({
 
 export const CircleButton = ({
 	size = 40,
-	colour = "#000000",
+	colour = "#00000000",
 	children,
 	style = {},
 	...rest
