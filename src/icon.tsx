@@ -6,10 +6,10 @@ export type IconProps = {
 	 * The svg string representation of a path (eg. "M0 0 L100 100")
 	 */
 	path: string;
-	size: number;
+	size?: number;
 	style?: any;
 	scale?: number;
-	colour: string;
+	colour?: string;
 	/**
 	 * Any additional props to pass to the internal Svg component (react-native-svg)
 	 */
