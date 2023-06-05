@@ -1,0 +1,31 @@
+{
+	"name": "@harrisontaee/react-native",
+	"version": "0.0.0",
+	"description": "An organised and practical collection of reusable React Native components and utilities",
+	"main": "index.ts",
+	"author": "Harrison Taee <harrisontaee@protonmail.com> (https://github.com/harrisontaee)",
+	"license": "MIT",
+	"homepage": "https://github.com/harrisontaee/react-native#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/harrisontaee/react-native.git"
+	},
+	"bugs": {
+		"url": "https://github.com/harrisontaee/react-native/issues"
+	},
+	"peerDependencies": {
+		"react": ">=18.0",
+		"react-native": ">=0.64"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+		"@types/react": "^18.2.8",
+		"@types/react-native": "^0.72.2",
+		"typescript": "4.8.3",
+		"react": ">=18.0",
+		"react-native": ">=0.64"
+	},
+	"dependencies": {
+		"react-native-svg": ">=13.4.0"
+	}
+}

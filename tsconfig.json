@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+	  "declaration": true,
+	  "outDir": "./lib",
+	  "strict": true,
+	  "baseUrl": "./",
+	  "paths": {
+		 "@harrisontaee/react-native": ["./src/index"]
+	  },
+	  "lib": ["DOM", "ESNext"],
+	  "jsx": "react-jsx"
+	},
+	"include": [
+	  "src"
+	],
+	"exclude": [
+	  "node_modules",
+	  "example",
+	]
+ }
