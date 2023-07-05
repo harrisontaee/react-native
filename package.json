@@ -14,8 +14,8 @@
 		"LICENSE.md"
 	],
 	"peerDependencies": {
-		"react": ">=18.0",
-		"react-native": ">=0.64"
+		"react": "*",
+		"react-native": "*"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.1",
