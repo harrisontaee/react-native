@@ -2,7 +2,7 @@
 	"name": "@harrisontaee/react-native",
 	"author": "Harrison Taee <harrisontaee@protonmail.com> (https://github.com/harrisontaee)",
 	"license": "MIT",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "An organised and practical collection of reusable React Native components and utilities",
 	"repository": "https://github.com/harrisontaee/react-native.git",
 	"homepage": "https://github.com/harrisontaee/react-native#readme",
@@ -25,7 +25,6 @@
 		"typescript": "4.8.3"
 	},
 	"dependencies": {
-		"@harrisontaee/library": "^1.0.10",
-		"react-native-svg": "^13.4.0"
+		"@harrisontaee/library": "^1.0.10"
 	}
 }
